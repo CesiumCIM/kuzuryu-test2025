@@ -18,6 +18,7 @@
   max-height: 90%;
   overflow-y: auto;
   background: rgba(255, 255, 255, 0.9);
+  opacity: 0.8;
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
@@ -62,6 +63,35 @@ overflow: hidden;
       font-weight: bold;
       padding: 5px;
     }
+
+    #mainTitle {
+      position: absolute;
+      top: 50px;
+      right:-50px;
+      transform: translateX(-50%);
+      font-size: 1em;
+      font-weight: bold;
+      background: rgba(255, 255, 255, 0.85);
+  opacity: 0.5;
+      padding: 6px 12px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+      z-index: 120;
+      user-select: none;
+color: black;
+    }
+
+#clientLogo {
+  position: absolute;
+  bottom: 10px;
+  right: 40px;
+  width: 150px; /* 小さめサイズ */
+  opacity: 0.5;  /* 透かし度 */
+  pointer-events: none; /* ロゴがクリックなどの邪魔にならないように */
+  z-index: 130;  /* タイトルより前面に */
+}
+
+
   </style>
 </head>
 <body>
@@ -124,10 +154,10 @@ const mainModels = [
   },
   {
     id: 3456029,
-    title: '警報局舎 18',
-    detail: 'ssss',
-    label: '警報局舎 18',
-    url: 'https://ideacon.ent.box.com/embed/s/pw5g3fx9jp8j91r9nzyipe0wbs5ch0dv/folder/325520725373'
+    title: '警報局舎 18 勝原',
+    detail: 'ダム下流巡視記録-PDF閲覧',
+    label: '警報局舎 18 勝原',
+    url: 'https://ideacon.ent.box.com/embed/s/ipk7viw5rtro5qt6yg3xr6o6w6nun553/folder/324655414834'
   },
   {
     id: 3455598,
@@ -280,10 +310,10 @@ treeContainer.style.display = 'none';
         },
         {
           name: '巡視・ダム設備 (仮)', children: [
-            { name: '九頭竜川巡視ルート ', id: 0 },
+            { name: '九頭竜川巡視ルート ', id: 3463131 },
             { name: '九頭竜川巡視点 ', id: 0 },
             { name: '九頭竜川ダム放流警戒設備', id: 0 },
-            { name: '真名川巡視ルート', id: 0 },
+            { name: '真名川巡視ルート', id: 3463133 },
             { name: '真名川巡視点', id: 0 },
             { name: '真名川ダム放流警戒設備', id: 0 },
             { name: '警報局（場所特定・未特定）', id: 0 }
@@ -388,6 +418,11 @@ treeContainer.style.display = 'none';
       });
     });
   </script>
+
+<div id="mainTitle">九頭竜川CIM (デモ版）</div>
+<img id="clientLogo" src="https://www.ideacon.co.jp/common/images/logo_white.svg" alt="クライアントロゴ" />
+
+
 </body>
 </html>
 
